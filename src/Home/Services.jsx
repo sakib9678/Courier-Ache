@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import imageFour from "../assets/images/loolo.png"
 
 const bannerSlides = [
   {
@@ -46,7 +47,7 @@ const services = [
     title: "WAREHOUSING",
     subtext: "Secure Storage",
     bgColor: "#00ac7d",
-    icon: "https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/doctor_square_hotkey.webp?w=1920&q=75",
+    icon: imageFour,
     link: "/doctors",
   },
 ];
