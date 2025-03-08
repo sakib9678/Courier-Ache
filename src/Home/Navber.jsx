@@ -17,7 +17,7 @@ const Navber = () => {
   // };
 
   return (
-    <section className="shadow-md">
+    <section className="shadow-md fixed w-full z-50 bg-white">
       {/* <div className="bg-[#0e0e0e] md:block hidden py-2">
         <div className="container">
           <div className="flex gap-6 items-center">
@@ -58,7 +58,7 @@ const Navber = () => {
           </div>
         </div>
       </div> */}
-      <nav className="bg-white container">
+      <nav className=" container">
         <div className="flex items-center justify-between py-2 md:py-3">
           <div>
             <img className="w-[150px]" src={logo} alt="" />

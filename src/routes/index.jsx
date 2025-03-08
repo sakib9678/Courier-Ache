@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../Home/Home";
 import HomeContent from "../Home/HomeContent";
-import About from "../About/About";
+import About from "../About/about";
 
 
 const AppRouter = () => {

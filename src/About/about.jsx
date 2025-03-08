@@ -1,9 +1,16 @@
 import React from 'react'
+import AboutUs from './aboutus'
+import OurCommitment from './OurCommitment'
+import WhyChooseUs from './WhyChooseUs'
 
-const about = () => {
+const About = () => {
   return (
-    <div>about</div>
+    <div className=''>
+        <AboutUs/>
+        <OurCommitment/>
+        <WhyChooseUs/>
+    </div>
   )
 }
 
-export default about
+export default About

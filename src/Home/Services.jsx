@@ -5,13 +5,13 @@ const bannerSlides = [
   {
     id: 1,
     image:
-      "https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/womensday_banner_web.webp",
+      "https://t4.ftcdn.net/jpg/04/19/98/19/360_F_419981971_jftDSPRJGskIgVirQqtKLItcFdEZ4Zve.jpg",
     alt: "Discover Women's Day Delights",
   },
   {
     id: 2,
     image:
-      "https://akam.cdn.jdmagicbox.com/images/icontent/newwap/web2022/womensday_banner_web.webp",
+      "https://cdn2.vectorstock.com/i/1000x1000/96/01/online-shopping-delivery-for-banner-poster-vector-33219601.jpg",
     alt: "Discover Women's Day Delights",
   },
 ];
@@ -56,6 +56,7 @@ const Services = () => {
 
   return (
     <section className="mt-16 my-10">
+      
       <div className="home_bannerbox mb-12 grid grid-cols-2 gap-4 container mx-auto">
         {/* Banner Slider */}
         <div className="relative h-[250px] rounded-lg overflow-hidden">
