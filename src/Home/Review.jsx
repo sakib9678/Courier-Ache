@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaQuoteLeft } from 'react-icons/fa';
 
 const reviewSlides = [
   {
@@ -15,60 +15,69 @@ const reviewSlides = [
     name : "-John Smith",
   },
 ]
+
 const Review = () => {
    const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
-    <div className="container mx-auto">
-       <div className="relative h-[300px] rounded-lg overflow-hidden mt-10 w-[80%] mx-auto bg-[#FEF7F1] shadow-lg">
-        
+    <div className="container mx-auto py-10 sm:py-20 px-4 sm:px-0">
+       <div className="relative h-[450px] sm:h-[400px] rounded-2xl overflow-hidden mt-5 sm:mt-10 w-full sm:w-[90%] md:w-[80%] mx-auto bg-gradient-to-br from-[#FFF8F4] to-white shadow-xl">
                 {reviewSlides.map((item, index) => (
                   <div
                     key={index}
-                    className={`absolute w-full h-full transition-opacity duration-1000 ease-in-out transform ${
-                      index === currentSlide ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                    className={`absolute w-full h-full transition-all duration-700 ease-out transform ${
+                      index === currentSlide 
+                        ? "opacity-100 translate-x-0" 
+                        : "opacity-0 translate-x-full"
                     }`}
                   >
-                    <h3 className='text-center text-4xl font-bold  mb-4'>What Our Customers Say</h3>
-                   <div className="p-6 shadow-md rounded-md bg-white/80 py-16 text-center mt-5 mx-4">
-                <p className="text-lg italic text-gray-700">{item.title}</p>
-                <h4 className="font-bold mt-2 text-gray-900">{item.name}</h4>
-            </div>
+                    <div className="px-4 sm:px-8 py-8 sm:py-12">
+                      <h3 className='text-center text-2xl sm:text-4xl font-bold mb-8 sm:mb-12 bg-gradient-to-r from-[#1A1A1A] to-[#F65B00] bg-clip-text text-transparent'>
+                        What Our Customers Say
+                      </h3>
+                      <div className="relative p-4 sm:p-8 rounded-xl bg-white shadow-lg mx-2 sm:mx-4 transform hover:scale-105 transition-all duration-300">
+                        <FaQuoteLeft className="hidden sm:block absolute top-0 left-0 -translate-y-1/2 -translate-x-1/2 text-4xl text-[#F65B00]/20" />
+                        <p className="text-base sm:text-xl text-gray-700 italic leading-relaxed">{item.title}</p>
+                        <h4 className="font-bold mt-4 sm:mt-6 text-[#F65B00] text-base sm:text-lg">{item.name}</h4>
+                      </div>
+                    </div>
                   </div>
                 ))}
       
                 {/* Navigation Controls */}
-                <div className="absolute top-1/2 left-0 right-0 flex justify-between px-4 -translate-y-1/2">
+                <div className="absolute top-1/2 left-2 right-2 sm:left-4 sm:right-4 flex justify-between -translate-y-1/2">
                   <button
                     onClick={() =>
                       setCurrentSlide((prev) =>
                         prev === 0 ? reviewSlides.length - 1 : prev - 1
                       )
                     }
-                    className="p-2 bg-white/80 rounded-full shadow-md hover:bg-[#F65B00] transition-colors duration-300"
+                    className="p-2 sm:p-3 bg-white/90 rounded-full shadow-lg hover:bg-[#F65B00] hover:text-white transition-all duration-300 transform hover:scale-110"
                     aria-label="Previous slide"
                   >
-                    <FaChevronLeft className="text-gray-800" />
+                    <FaChevronLeft className="text-sm sm:text-xl" />
                   </button>
                   <button
                     onClick={() =>
                       setCurrentSlide((prev) => (prev + 1) % reviewSlides.length)
                     }
-                    className="p-2 bg-white/80 rounded-full shadow-md hover:bg-[#F65B00] transition-colors duration-300"
+                    className="p-2 sm:p-3 bg-white/90 rounded-full shadow-lg hover:bg-[#F65B00] hover:text-white transition-all duration-300 transform hover:scale-110"
                     aria-label="Next slide"
                   >
-                    <FaChevronRight className="text-gray-800 " />
+                    <FaChevronRight className="text-sm sm:text-xl" />
                   </button>
                 </div>
       
                 {/* Pagination */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 sm:space-x-3">
                   {reviewSlides.map((_, index) => (
                     <span
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-4 h-4 rounded-full cursor-pointer transition-all duration-300 ${
-                        index === currentSlide ? "bg-[#F35C02] transform scale-125" : "bg-gray-300"
+                      className={`h-1.5 sm:h-2 rounded-full cursor-pointer transition-all duration-300 ${
+                        index === currentSlide 
+                          ? "w-6 sm:w-8 bg-[#F65B00]" 
+                          : "w-1.5 sm:w-2 bg-gray-300 hover:bg-[#F65B00]/50"
                       }`}
                       role="button"
                       tabIndex={0}
