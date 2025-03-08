@@ -59,7 +59,7 @@ const Services = () => {
     <section className="mt-16 my-10">
       <div className="home_bannerbox mb-12 grid  md:grid-cols-2 grid-cols-1 gap-4 container mx-auto">
         {/* Banner Slider */}
-        <div className="relative h-[150px] md:h-[250px] rounded-lg overflow-hidden">
+        <div className="relative h-[150px] md:h-[300px] rounded-lg overflow-hidden">
           {bannerSlides.map((slide, index) => (
             <div
               key={slide.id}
