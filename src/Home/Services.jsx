@@ -56,10 +56,9 @@ const Services = () => {
 
   return (
     <section className="mt-16 my-10">
-      
-      <div className="home_bannerbox mb-12 grid grid-cols-2 gap-4 container mx-auto">
+      <div className="home_bannerbox mb-12 grid  md:grid-cols-2 grid-cols-1 gap-4 container mx-auto">
         {/* Banner Slider */}
-        <div className="relative h-[250px] rounded-lg overflow-hidden">
+        <div className="relative h-[150px] md:h-[250px] rounded-lg overflow-hidden">
           {bannerSlides.map((slide, index) => (
             <div
               key={slide.id}
@@ -117,11 +116,11 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {services.map((service) => (
             <div
               key={service.id}
-              className="relative p-4 rounded-lg overflow-hidden group"
+              className="relative p-4 rounded-lg overflow-hidden group h-[250px] md:h-full"
               style={{ backgroundColor: service.bgColor }}
             >
               <div className="text-white font-medium text-[13px]">
